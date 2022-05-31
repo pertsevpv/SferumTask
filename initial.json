@@ -1,0 +1,32 @@
+{
+  "account": {
+    "id": 0,
+    "balance": 400
+  },
+  "products": [
+    {
+      "book": {
+        "author": "Толстой Л. Н.",
+        "name": "Война и мир"
+      },
+      "price": 100,
+      "amount": 2
+    },
+    {
+      "book": {
+        "author": "Островский А. Н.",
+        "name": "Бесприданница"
+      },
+      "price": 200,
+      "amount": 3
+    },
+    {
+      "book": {
+        "name": "Вишнёвый сад",
+        "author": "Чехов А. П."
+      },
+      "price": 150,
+      "amount": 1
+    }
+  ]
+}

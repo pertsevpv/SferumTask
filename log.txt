@@ -1,0 +1,10 @@
+19:17:49 31.05.2022 [SUCCESS] 	 Book Book(id=1, name=Война и мир, author=Толстой Л. Н.) saved
+19:17:49 31.05.2022 [SUCCESS] 	 Product Product(id=1, price=100, amountInMarket=2, book=Book(id=1, name=Война и мир, author=Толстой Л. Н.)) saved
+19:17:49 31.05.2022 [SUCCESS] 	 Book Book(id=2, name=Бесприданница, author=Островский А. Н.) saved
+19:17:49 31.05.2022 [SUCCESS] 	 Product Product(id=2, price=200, amountInMarket=3, book=Book(id=2, name=Бесприданница, author=Островский А. Н.)) saved
+19:17:49 31.05.2022 [SUCCESS] 	 Book Book(id=3, name=Вишнёвый сад, author=Чехов А. П.) saved
+19:17:49 31.05.2022 [SUCCESS] 	 Product Product(id=3, price=150, amountInMarket=1, book=Book(id=3, name=Вишнёвый сад, author=Чехов А. П.)) saved
+19:17:49 31.05.2022 [SUCCESS] 	 Account Account(id=1, balance=400, products=null) saved
+19:17:49 31.05.2022 [INFO] 	 Initial values saved
+19:18:30 31.05.2022 [ERROR] 	 User require 2, but there are only 1
+19:18:30 31.05.2022 [ERROR] 	 Request processing failed; nested exception is com.example.exceptions.NoSuchProductException: User require 2, but there are only 1

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Shop</title>
+    <style>
+        table {
+            width: 1000px;
+        }
+
+        .info {
+            padding-bottom: 15px;
+            border-bottom: 1px grey solid;
+        }
+    </style>
+
+</head>
+<body>
+<div class="account info">
+    <h2>Аккаунт</h2>
+    <h3>Текущий баланс: <span th:text="${account.balance}"></span></h3>
+    <table border="1">
+        <tr>
+            <th>Id продукта</th>
+            <th>Кол-во в корзине</th>
+            <th>Цена</th>
+            <th>Название книги</th>
+            <th>Автор</th>
+        </tr>
+        <tr th:each="item: ${account.products}">
+            <th th:text="${item.product.id}"></th>
+            <th th:text="${item.amount}"></th>
+            <th th:text="${item.product.price}"></th>
+            <th th:text="${item.product.book.name}"></th>
+            <th th:text="${item.product.book.author}"></th>
+        </tr>
+    </table>
+</div>
+<div class="market info">
+    <h2>Маркет</h2>
+    <h3>Товары в наличии: </h3>
+    <table border="1">
+        <tr>
+            <th>Id продукта</th>
+            <th>Кол-во в магазине</th>
+            <th>Цена</th>
+            <th>Название книги</th>
+            <th>Автор</th>
+        </tr>
+        <tr th:each="item : ${products}">
+            <th th:text="${item.id}"></th>
+            <th th:text="${item.amountInMarket}"></th>
+            <th th:text="${item.price}"></th>
+            <th th:text="${item.book.name}"></th>
+            <th th:text="${item.book.author}"></th>
+        </tr>
+    </table>
+</div>
+<form th:action="@{/deal}"
+      th:object="${dealRequest}"
+      th:method="post">
+    <h2>Совершить сделку</h2>
+    <label for="id-input">Id продукта</label>
+    <input type="number"
+           id="id-input"
+           th:field="*{productId}"
+           min="0"
+           required>
+    <label for="amount-input">Кол-во продукта</label>
+    <input type="number"
+           id="amount-input"
+           th:field="*{amount}"
+           min="0"
+           required>
+    <button type="submit">Купить</button>
+</form>
+</body>
+</html>
